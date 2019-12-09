@@ -1,0 +1,1 @@
+vendor/bin/php-cs-fixer fix src --rules=@PSR1,@PSR2

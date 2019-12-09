@@ -1,0 +1,19 @@
+{
+    "name": "almamu/fixed",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Alexis Maiquez",
+            "email": "almamu@almamu.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "theseer/phpdox": "^0.12.0",
+        "phpstan/phpstan": "^0.12.1",
+        "friendsofphp/php-cs-fixer": "^2.16"
+    },
+    "autoload": {
+        "classmap": ["src"]
+    }
+}
