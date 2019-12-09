@@ -11,7 +11,8 @@
     "require-dev": {
         "theseer/phpdox": "^0.12.0",
         "phpstan/phpstan": "^0.12.1",
-        "friendsofphp/php-cs-fixer": "^2.16"
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phing/phing": "^2.16"
     },
     "autoload": {
         "classmap": ["src"]

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="PresentacionPHP" default="build">
+
+    <!-- ============================================  -->
+    <!-- Target: prepare                               -->
+    <!-- ============================================  -->
+    <target name="prepare">
+        <echo msg="Making directory ./deploy" />
+        <mkdir dir="./deploy" />
+    </target>
+
+    <!-- ============================================  -->
+    <!-- (DEFAULT) Target: build                       -->
+    <!-- ============================================  -->
+    <target name="build" depends="prepare">
+        <echo msg="Copying files to build directory..." />
+
+        <mkdir dir="./deploy/src" />
+        <copy file="./src/Logger.php" tofile="./deploy/src/Logger.php" />
+
+        <mkdir dir="./deploy/public/" />
+        <copy file="./public/index.php" tofile="./deploy/public/index.php" />
+        <copy file="./composer.json" tofile="./deploy/composer.json" />
+        <copy file="./composer.lock" tofile="./deploy/composer.lock" />
+
+        <exec command="composer install --working-dir ./deploy" passthru="true" />
+    </target>
+</project>
